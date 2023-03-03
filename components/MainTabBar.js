@@ -30,7 +30,7 @@ const Tab = createBottomTabNavigator();
 function MainTabBar() {
     return (
         
-            <Tab.Navigator initialRouteName='Home' screenOptions={({ route }) => ({tabBarIcon: ({ focused, color, size, }) => {
+            <Tab.Navigator shifting={true} initialRouteName='Home' screenOptions={({ route }) => ({tabBarIcon: ({ focused, color, size, }) => {
                         let iconName;
 
                         if (route.name === 'Wallet') {
@@ -42,12 +42,16 @@ function MainTabBar() {
                         } else if (route.name === 'Card') {
                             iconName = focused ? 'ios-card' : 'ios-card-outline';
                         }
-                        return <Ionicons name={iconName} size={size} color={color} />;
+                        return <Ionicons name={iconName} size={25} color={color} />;
                     },
                     tabBarActiveTintColor: 'black',
                     tabBarInactiveTintColor: 'gray',
-                    
+                    tabBarShowLabel: false,
+                    tabBarStyle:{
+                        height:100,
+                      },
                 })}
+                
             >
                 <Tab.Screen name='Wallet' component={HomeScreen}  options={{ headerShown: false }}/>
                 <Tab.Screen name='Discover' component={DiscoverScreen} options={{ headerShown: false }} />

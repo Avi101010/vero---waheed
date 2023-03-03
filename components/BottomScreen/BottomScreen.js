@@ -24,7 +24,7 @@ function BottomScreen() {
                 <Pressable onPress={toggleBottomNavigationView}>
                     <Image
                         source={require('../../assets/png/logoblack.png')}
-                        style={{ width: 55, height: 55, marginTop: -50, borderRadius: 18 }}
+                        style={{ width: 55, height: 55, marginTop: -42, borderRadius: 18 }}
                     />
                 </Pressable>
                 <BottomSheet
