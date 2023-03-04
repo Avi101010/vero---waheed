@@ -49,7 +49,7 @@ function MainTabBar() {
                     tabBarShowLabel: false,
                     tabBarStyle:{
                         height:100,
-                      },
+                    },
                 })}
                 
             >
