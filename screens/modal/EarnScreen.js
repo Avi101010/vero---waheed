@@ -1,7 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 import * as  React from 'react';
 import {useState} from 'react';
-import { View, Text, Appearance, StyleSheet, Image, TextInput } from 'react-native';
+import { View, Text, Appearance,SafeAreaView, StyleSheet, Image, TextInput } from 'react-native';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import Ionicons from 'react-native-vector-icons/Ionicons'
 import {Colors} from 'react-native/Libraries/NewAppScreen';
@@ -12,6 +12,7 @@ function EarnScreen({ navigation }) {
    
 
     return(
+        <SafeAreaView>
         <View>
         <View style={{flexDirection:'row', backgroundColor:'white', justifyContent:'center', alignItems:'center', width:'90%', borderRadius:12, alignSelf:'center'}}>
                 <Ionicons name="search-outline" style={{color:'black'}}></Ionicons>
@@ -54,13 +55,14 @@ function EarnScreen({ navigation }) {
                  
             </View>
         </View>
+        </SafeAreaView>
     )
 }
 
 const styles = StyleSheet.create({
     mainView:{
         margin:10,
-        alignContent:'center'
+        alignContent:'center',
     },
     mainBox:{
         flexDirection:'row',
