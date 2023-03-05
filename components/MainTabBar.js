@@ -14,7 +14,7 @@ import DiscoverScreen from '../screens/home/DiscoverScreen';
 import BrowserScreen from '../screens/home/Browser/BrowserScreen';
 import CardScreen from '../screens/home/CardScreen';
 import HomeScreen from '../screens/home/Home/HomeScreen';
-
+import BottomSheetStack from './BottomSheetStack';
 import BuyScreen from '../screens/modal/BuyScreen';
 
 const CustomHeaderButton = (props) => (
@@ -49,11 +49,11 @@ function MainTabBar() {
                     tabBarShowLabel: false,
                     tabBarStyle:{
                         height:100,
-                    },
+                      },
                 })}
                 
             >
-                <Tab.Screen name='Wallet' component={HomeScreen}  options={{ headerShown: false }}/>
+                <Tab.Screen name='Wallet' component={BottomSheetStack}  options={{ headerShown: false }}/>
                 <Tab.Screen name='Discover' component={DiscoverScreen} options={{ headerShown: false }} />
                 <Tab.Screen name='Vero' component={AddScreenComponent} options={{tabBarButton: () => <BottomScreen/>}} />
                 <Tab.Screen name='Browser' component={BrowserScreen} options={{ headerShown: false }} />

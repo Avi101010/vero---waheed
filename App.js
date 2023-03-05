@@ -60,12 +60,12 @@ useEffect(() => {
      
           <Stack.Screen name="Home" component={MainTabBar} options={{ headerShown: false }} />
 
-          <Stack.Screen name="Buy" component={BuyScreen} />
+          {/* <Stack.Screen name="Buy" component={BuyScreen} />
           <Stack.Screen name="Earn" component={EarnScreen} />
           <Stack.Screen name="Receive" component={ReceiveScreen} />
           <Stack.Screen name="Send" component={SendScreen} />
           <Stack.Screen name="Swap" component={SwapScreen} />
-          <Stack.Screen name="Bridge" component={BridgeScreen} />
+          <Stack.Screen name="Bridge" component={BridgeScreen} /> */}
 
           <Stack.Screen name="BottomScreen" component={BottomScreen} />
 
